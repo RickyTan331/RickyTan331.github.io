@@ -18,3 +18,35 @@ body { font-family: 'Inter', sans-serif; }
   .navbar-light .nav-link { color:#ddd; }
   .card-icon { color:#66b0ff; }
 }
+/* === GENERAL MOTION === */
+html { scroll-behavior: smooth; }
+
+/* Hero background slow zoom */
+.hero {
+  background:url('https://source.unsplash.com/1600x900?galaxy') center/cover fixed;
+  color:#fff; position:relative; overflow:hidden;
+}
+.hero::before {          /* dark overlay */
+  content:""; position:absolute; inset:0;
+  background:rgba(0,0,0,.55);
+}
+.hero > * { position:relative; }
+
+/* Card hover lift */
+.card {
+  transition:transform .35s ease, box-shadow .35s ease;
+}
+.card:hover {
+  transform:translateY(-6px) scale(1.02);
+  box-shadow:0 1rem 2rem rgba(0,0,0,.15);
+}
+
+/* Navbar shrink on scroll */
+.navbar {
+  transition:all .25s ease;
+}
+.navbar.scrolled {
+  padding-top:.25rem !important;
+  padding-bottom:.25rem !important;
+  box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
