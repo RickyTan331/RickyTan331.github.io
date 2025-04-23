@@ -1,0 +1,10 @@
+title: My Demo Site
+description: Built with GitHub Pages
+author: Your Name
+
+theme: jekyll-theme-cayman   # built‑in green theme
+
+plugins:                      # free extras GitHub supports
+  - jekyll-feed               # RSS feed
+  - jekyll-sitemap            # sitemap.xml for Google
+  - jekyll-seo-tag            # SEO / social meta tags
